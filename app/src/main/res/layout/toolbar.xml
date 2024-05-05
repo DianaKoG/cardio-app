@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="413dp"
+        android:layout_height="40dp"
+        android:background="@color/red"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Первичное тестирование"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+</androidx.appcompat.widget.Toolbar>

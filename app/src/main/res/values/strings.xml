@@ -16,6 +16,23 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+
+    <string name="title_activity_survey">SurveyActivity</string>
+    <string-array name="heritage">
+        <item>Нет</item>
+        <item>Да</item>
+        <item>Не знаю</item>
+    </string-array>
+    <string-array name="habits">
+        <item>Отсутствуют</item>
+        <item>Курение</item>
+        <item>Алкоголь</item>
+        <item>Малоактивный образ жизни</item>
+        <item>Неправильное питание</item>
+        <item>Частые стрессы</item>
+    </string-array>
+    <string name="title_activity_dhfhhfhf">dhfhhfhf</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -52,5 +69,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="title_activity_survey">SurveyActivity</string>
+    <string name="textview">TextView</string>
 </resources>

@@ -6,14 +6,19 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.text.style.UnderlineSpan
-import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.example.cardio_app.data.model.LoginRequest
 import com.example.cardio_app.data.model.LoginResponse
+import com.example.cardio_app.data.model.SurveyRequest
 import com.example.cardio_app.data.restapi.UserApi
+import com.google.gson.Gson
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
 
             //Retrofit для соединения с сервером
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://192.168.1.13:8080/")
+                .baseUrl("http://192.168.1.6:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
@@ -68,12 +73,12 @@ class LoginActivity : AppCompatActivity() {
             call.enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
-                        startActivity(
-                            Intent(
-                                this@LoginActivity, RegisterActivity::class.java
-                            )
-                        ) //переход на активити после авторизации
-                    } else {
+                        val token = response.body().toString()
+                        val intent = Intent(this@LoginActivity, SurveyActivity::class.java)
+                        intent.putExtra("token", "45d7f5b1-bf3a-4dd1-be60-0d8b8f86ef3d")
+                        startActivity(intent)
+                    }
+                    else {
                         Toast.makeText(this@LoginActivity, "API Error", Toast.LENGTH_SHORT).show()
                     }
                 }

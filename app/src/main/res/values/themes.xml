@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.Cardio_app" parent="Base.Theme.Cardio_app" />
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+    <item name="android:actionBarStyle">@style/MyTheme.ActionBar</item>
+    </style>
+    <style name="MyTheme.ActionBar"
+        parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/red</item>
+    </style>
 </resources>
